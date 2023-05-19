@@ -1,3 +1,8 @@
+package dao;
+
+import dao.Ads;
+import model.Ad;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +15,8 @@ public class ListAdsDao implements Ads {
         }
         return ads;
     }
+
+
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
@@ -39,4 +46,10 @@ public class ListAdsDao implements Ads {
         ));
         return ads;
     }
+    @Override
+    public void insert(Ad ad) {
+
+        this.ads.add(ad);
+    }
+
 }
